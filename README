@@ -24,3 +24,15 @@ ar -t libcalc.a # libcalc를 구성하는 object 출력
 # Output
 #add.o
 #sub.o
+
+nm libcalc.a  # object와 함수명 출력
+
+libcalc.a(add.o):
+0000000000000018 s EH_frame1
+0000000000000000 T _add
+0000000000000030 S _add.eh
+
+libcalc.a(sub.o):
+0000000000000018 s EH_frame1
+0000000000000000 T _sub
+0000000000000030 S _sub.eh
